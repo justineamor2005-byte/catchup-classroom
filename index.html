@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CatchUp Classroom</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+<header class="topbar">
+  <a class="brand" href="#">CatchUp<span>Classroom</span></a>
+  <span class="tag">LEARN AT YOUR PACE</span>
+  <button class="admin-btn" onclick="showAdmin()">Manage Lessons</button>
+</header>
+
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">YOUR LEARNING RECOVERY HUB</p>
+      <h1>Missed a lesson?<br><span>Let's catch you up.</span></h1>
+      <p>Review lessons, explore learning modules, and
+         test what you've learned, anytime.</p>
+      <a class="primary-btn" href="#lessons">Explore lessons ↓</a>
+    </section>
+
+    <section class="stats">
+      <article><strong>01</strong><span>Review lessons</span></article>
+      <article><strong>02</strong><span>Study modules</span></article>
+      <article><strong>03</strong><span>Take quizzes</span></article>
+    </section>
+
+    <section id="lessons" class="section">
+      <p class="eyebrow">START LEARNING</p>
+      <h2>Your learning space</h2>
+      <p class="muted">Choose where you want to begin.</p>
+
+      <div class="cards">
+        <article class="card">
+          <div class="card-icon">📚</div>
+          <h3>Missed Lessons</h3>
+          <p>Review topics discussed while you were away.</p>
+          <button onclick="showMessage('Missed Lessons')">
+            View lessons →
+          </button>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">📖</div>
+          <h3>Learning Modules</h3>
+          <p>Study learning materials and practice activities.</p>
+          <button onclick="showMessage('Learning Modules')">
+            Open modules →
+          </button>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">✍️</div>
+          <h3>Knowledge Check</h3>
+          <p>Test your understanding with short quizzes.</p>
+          <button onclick="startQuiz()">Try a quiz →</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="activity" class="activity" hidden>
+      <h2 id="activity-title"></h2>
+      <div id="activity-content"></div>
+      <button class="secondary-btn"
+        onclick="closeActivity()">Back to home</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>CatchUp Classroom · Every lesson is another chance to learn.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
